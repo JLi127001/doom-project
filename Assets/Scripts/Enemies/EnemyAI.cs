@@ -5,15 +5,15 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    private EnemyAwareness enemyAwareness;
-    private Transform playerTransform;
-    private NavMeshAgent enemyNavMeshAgent;
-    private void Start() {
+    public EnemyAwareness enemyAwareness;
+    public Transform playerTransform;
+    public NavMeshAgent enemyNavMeshAgent;
+    protected virtual void Start() {
         enemyAwareness = GetComponent<EnemyAwareness>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         enemyNavMeshAgent = GetComponent<NavMeshAgent>();
     }
-    private void Update() {
+    protected virtual void Update() {
         if (enemyAwareness.isAggro) {
             enemyNavMeshAgent.SetDestination(playerTransform.position);
         } else {

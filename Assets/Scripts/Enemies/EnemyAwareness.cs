@@ -6,12 +6,13 @@ public class EnemyAwareness : MonoBehaviour
 {
     public Material aggroMat;
     public bool isAggro;
-    private Transform playerTransform;
-    private void Start() {
+    public Transform playerTransform;
+    [SerializeField] private float aggroRange;
+    protected virtual void Start() {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    private void Update() {
-        if (Vector3.Distance(playerTransform.position, transform.position) <= 5f) {
+    protected virtual void Update() {
+        if (Vector3.Distance(playerTransform.position, transform.position) <= aggroRange) {
             isAggro = true;
         }
 

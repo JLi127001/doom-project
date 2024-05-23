@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09c39ceaaccb23408b33d53eec07fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAwareness: {fileID: 0}
+  enemyAwareness: {fileID: 6085032370280136711}
   playerTransform: {fileID: 0}
   enemyNavMeshAgent: {fileID: 0}
   shootRange: 10

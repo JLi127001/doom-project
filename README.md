@@ -6,24 +6,24 @@ Using Unity 2022.3.21f1 (Same as homework)
 Doom/Quake-inspired arena shooter set in a post-apocalyptic CSE2 building, where the enemies are bugs. We are going to use pixel art for the walls, guns, pickups, and enemies. The final boss will be a 3-d bug mascot that has animations. We have one big level that leads to a final boss. In the main level, you explore the cse2 building, collect key cards, collect ammo, and shoot the enemies (computer bugs) with debugging tools (the weapons). The enemies have projectiles.
 
 # Feature list
-Targets
-Pickups
-Weapons
-One single finished level
-Final boss
-Boss on the roof of the building
+- Targets
+- Pickups
+- Weapons
+- One single finished level
+- Final boss
+- Boss on the roof of the building
 
 # Development plan
-Movement
-Shooting
-Pickups
-Enemies
-HUD
-Health & UI
-Gun animation
-Doors
-Level Design
-Polish
+- Movement
+- Shooting
+- Pickups
+- Enemies
+- HUD
+- Health & UI
+- Gun animation
+- Doors
+- Level Design
+- Polish
 
 
 

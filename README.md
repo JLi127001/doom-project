@@ -32,15 +32,15 @@ Doom/Quake-inspired arena shooter set in a post-apocalyptic CSE2 building, where
 We will have movement, a weapon, some pickups, and (maybe) a door. This will be on a flat plane for the checkpoint. Some textures on the walls as well. Some animation assets will be done as well.
 
 # Materials and any external help needed 
-Unity
-Github
-Free YouTube videos
+- Unity
+- Github
+- Free YouTube videos
 
 # Key Risks and Mitigations
-Implement movement first so we can build up the rest of the game, but we mitigate this by doing it early in the development process
-Learning animation (particularly in 3D) will be a learning curve. Will watch tutorials. 
-Physics engine and simulations could potentially be difficult - any advanced physics can fallback to Unity’s built-in physics
-Some gun ideas may be difficult to implement - we have tutorials for most of these, and we plan to cut and replace any guns that are too difficult to implement
-Rocket launcher can be tricky with unique projectile physics and explosion
-Flamethrower could be a difficult idea
-Movement camera bob can be difficult to figure out - we have tutorials for this as well, and can implement a basic sinusoid movement pattern if other things fail
+- Implement movement first so we can build up the rest of the game, but we mitigate this by doing it early in the development process
+- Learning animation (particularly in 3D) will be a learning curve. Will watch tutorials. 
+- Physics engine and simulations could potentially be difficult - any advanced physics can fallback to Unity’s built-in physics
+- Some gun ideas may be difficult to implement - we have tutorials for most of these, and we plan to cut and replace any guns that are too difficult to implement
+- Rocket launcher can be tricky with unique projectile physics and explosion
+- Flamethrower could be a difficult idea
+- Movement camera bob can be difficult to figure out - we have tutorials for this as well, and can implement a basic sinusoid movement pattern if other things fail

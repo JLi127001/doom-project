@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public EnemyManager enemyManager;
-    private float enemyHealth = 2f;
+    public float enemyHealth = 2f;
 
     public GameObject gunHitEffect;
 

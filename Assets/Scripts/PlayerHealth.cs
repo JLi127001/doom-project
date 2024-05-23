@@ -19,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
         armor = 0;
+        CanvasManager.Instance.updateHealth(health);
+        CanvasManager.Instance.updateArmor(armor);
         
     }
 
@@ -53,5 +55,38 @@ public class PlayerHealth : MonoBehaviour
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.buildIndex);
         }
+        CanvasManager.Instance.updateHealth(health);
+        CanvasManager.Instance.updateArmor(armor);
+    }
+
+    public bool heal(int amount)
+    {
+        if(health < maxHealth)
+        {
+            this.health += amount;
+            if (health > maxHealth)
+            {
+                health = maxHealth;
+            }
+            CanvasManager.Instance.updateHealth(health);
+            return true;
+        }
+        return false;
+
+    }
+
+    public bool shield(int amount)
+    {
+        if(armor < maxArmor)
+        {
+            this.armor += amount;
+            if (armor > maxArmor)
+            {
+                armor = maxArmor;
+            }
+            CanvasManager.Instance.updateArmor(armor);
+            return true;
+        }
+        return false;
     }
 }

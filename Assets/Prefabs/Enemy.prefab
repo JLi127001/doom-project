@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83e696633dea9f45b553150a66a057d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAwareness: {fileID: 378747913688135771}
+  enemyAwareness: {fileID: 0}
   playerTransform: {fileID: 0}
   enemyNavMeshAgent: {fileID: 0}
 --- !u!114 &3510956426988509151

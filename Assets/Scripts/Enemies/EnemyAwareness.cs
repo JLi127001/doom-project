@@ -9,7 +9,7 @@ public class EnemyAwareness : MonoBehaviour
     public Transform playerTransform;
     [SerializeField] private float aggroRange;
     protected virtual void Start() {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("PlayerModel").transform;
     }
     protected virtual void Update() {
         if (Vector3.Distance(playerTransform.position, transform.position) <= aggroRange) {

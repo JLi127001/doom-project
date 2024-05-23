@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent enemyNavMeshAgent;
     protected virtual void Start() {
         enemyAwareness = GetComponent<EnemyAwareness>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("PlayerModel").transform;
         enemyNavMeshAgent = GetComponent<NavMeshAgent>();
     }
     protected virtual void Update() {

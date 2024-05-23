@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66aaf39ad6d2304e85e14bdc84bfd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootVel: 50
+  shootVel: 200
   projectile: {fileID: 7884528787530778499, guid: 8c1d57c1c14556d498e93e9806b13baa, type: 3}
   fireRate: 1
   firePoint: {fileID: 6713111698127491777}

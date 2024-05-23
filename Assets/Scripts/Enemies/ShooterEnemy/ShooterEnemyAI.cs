@@ -20,8 +20,10 @@ public class ShooterEnemyAI : EnemyAI
             enemyNavMeshAgent.SetDestination(playerTransform.position);
         } else {
             enemyNavMeshAgent.SetDestination(transform.position);
-            transform.LookAt(playerTransform);
-            enemyShoot.shoot(new Vector3(0, 0, 1));
+            if (enemyAwareness.isAggro && Vector3.Distance(playerTransform.position, transform.position) <= shootRange) {
+                transform.LookAt(playerTransform);
+                enemyShoot.shoot(new Vector3(0, 0, 1));
+            }
         }
     }
 }

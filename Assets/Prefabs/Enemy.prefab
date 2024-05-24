@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7471784245452364381}
   - component: {fileID: 378747913688135771}
   - component: {fileID: 1194097974502869764}
-  - component: {fileID: 3510956426988509151}
+  - component: {fileID: 6616085570022441063}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -175,8 +175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 0}
-  enemyHealth: 2
-  gunHitEffect: {fileID: 1547505036575968846, guid: 8f6060aa48d5f90419aa1e405bf6cdef, type: 3}
 --- !u!114 &378747913688135771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +206,7 @@ MonoBehaviour:
   enemyAwareness: {fileID: 0}
   playerTransform: {fileID: 0}
   enemyNavMeshAgent: {fileID: 0}
---- !u!114 &3510956426988509151
+--- !u!114 &6616085570022441063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,7 +215,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4246549913397559875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a718230f5a476249bec473a7d2026a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e7017700a3e4d843ac40b67c92d7822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  bloodParticles: {fileID: 3766399294070511499, guid: 8f6060aa48d5f90419aa1e405bf6cdef, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deleteProjectile : MonoBehaviour
+public class TimedSelfDestruct : MonoBehaviour
 {
     private float lifeTime;
     [SerializeField] private float lifeSpan;

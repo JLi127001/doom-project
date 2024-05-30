@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ProjectileHit : MonoBehaviour
 {
+    [SerializeField] float damage;
     private void OnCollisionEnter(Collision other) {
-        Destroy(gameObject);
         if (other.gameObject.tag == "PlayerModel") {
-            Debug.Log("Hit!");
+            other.gameObject.GetComponentInParent<PlayerHealth>().damagePlayer((int) damage);
         }
+        Destroy(gameObject);
     }
 }

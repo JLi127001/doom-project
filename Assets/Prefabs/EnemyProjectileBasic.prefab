@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc2f707565b03643bb9369b124097ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 15
 --- !u!1 &7884528787530778499
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +158,7 @@ GameObject:
   - component: {fileID: 4839271945451004225}
   - component: {fileID: 5268803241281468876}
   m_Layer: 10
-  m_Name: EnemyProjectile
+  m_Name: EnemyProjectileBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

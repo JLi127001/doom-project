@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
             health -= accumulatedDamage;
         }
     
-        if(health >= 0)
+        if(health <= 0)
         {
             //restart everything
             Scene currentScene = SceneManager.GetActiveScene();

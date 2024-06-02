@@ -1472,7 +1472,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &6038708330382959753
 GameObject:
@@ -1826,7 +1826,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3f5265683c1d1a049b2d359d1474b8eb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

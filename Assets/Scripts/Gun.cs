@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour {
     private void Start() {
         PlayerShoot.shootInput += Shoot;
         PlayerShoot.reloadInput += StartReload;
+        gunData.reloading = false;
+        gunData.currentAmmo = gunData.magSize;
         CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
     }
 
@@ -41,6 +43,7 @@ public class Gun : MonoBehaviour {
     private void Shoot() {
         if (gunData.currentAmmo > 0) {
             if (CanShoot()) {
+                CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
                 if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, gunData.maxDistance)){
                     IDamageable damageable = hitInfo.transform.GetComponent<IDamageable>();
                     damageable?.TakeDamage(gunData.damage);
@@ -51,7 +54,6 @@ public class Gun : MonoBehaviour {
                 OnGunShot();
             }
         }
-        CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
     }
 
     private void Update() {

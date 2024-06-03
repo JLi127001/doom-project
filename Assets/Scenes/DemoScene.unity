@@ -247,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &10546885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3129,6 +3129,12 @@ PrefabInstance:
     - target: {fileID: 4864098244358983465, guid: 2f1c27b2ebc75cc41bfd50bc917fc0da, type: 3}
       propertyPath: m_Name
       value: PlayerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961555893279554268, guid: 2f1c27b2ebc75cc41bfd50bc917fc0da, type: 3}
+      propertyPath: m_text
+      value: '<Ammo> N/A
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 9024026861306828758, guid: 2f1c27b2ebc75cc41bfd50bc917fc0da, type: 3}
       propertyPath: m_Pivot.x

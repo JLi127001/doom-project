@@ -35,9 +35,9 @@ public class CanvasManager : MonoBehaviour
     {
         armor.text = "<Armor> " + val.ToString();
     }
-    public void updateAmmo(int val)
+    public void updateAmmo(int mag, int max)
     {
-        ammo.text = "<Ammo> " + val.ToString();
+        ammo.text = "<Ammo> " + mag.ToString() + "/" + max.ToString();
     }
 
     public void updateAmmo(string val)

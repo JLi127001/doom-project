@@ -12,8 +12,9 @@ public class PlayerMove : MonoBehaviour
 
     private Vector3 inputVector;
     private Vector3 movementVector;
-    private float gravity = -9.81f;
+    private float gravity = -9.8f;
     private bool isWalking;
+    private float airTime =  0f;
 
     void Start()
     {
@@ -47,8 +48,16 @@ public class PlayerMove : MonoBehaviour
             // a little bit of slide at the end of the movement
             inputVector = Vector3.Lerp(inputVector, Vector3.zero, momentumDamping * Time.deltaTime);
         }
+        if (!charControl.isGrounded)
+        {
+            airTime += Time.deltaTime;
+        }
+        else
+        {
+            airTime = 0f;
+        }
 
-        movementVector = (inputVector * playerSpeed) + (Vector3.up * gravity);
+        movementVector = (inputVector * playerSpeed) + (Vector3.up * gravity*Mathf.Pow(airTime + 1,2));
     }
 
     void movePlayer()

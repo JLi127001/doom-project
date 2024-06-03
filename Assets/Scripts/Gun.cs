@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour {
     private void Start() {
         PlayerShoot.shootInput += Shoot;
         PlayerShoot.reloadInput += StartReload;
+        CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
     }
 
     private void OnDisable() => gunData.reloading = false;
@@ -32,7 +33,7 @@ public class Gun : MonoBehaviour {
         gunData.currentAmmo = gunData.magSize;
 
         gunData.reloading = false;
-        CanvasManager.Instance.updateAmmo(gunData.currentAmmo);
+        CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize); // replace magsize with ammo inventory
     }
 
     private bool CanShoot() => !gunData.reloading && timeSinceLastShot > 1f / (gunData.fireRate / 60f);
@@ -50,7 +51,7 @@ public class Gun : MonoBehaviour {
                 OnGunShot();
             }
         }
-        CanvasManager.Instance.updateAmmo(gunData.currentAmmo);
+        CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
     }
 
     private void Update() {

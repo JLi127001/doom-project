@@ -28,14 +28,28 @@ public class BossAI : MonoBehaviour
     [SerializeField] GameObject bossProjectile;
     [SerializeField] private Transform projectileSpawnTransform;
 
+    // misc
+    private Vector3 originalPos;
+    private Rigidbody parentRigBod;
+    private Transform parentTransform;
+
     void Start()
     {
+        parentRigBod = transform.GetComponentInParent<Rigidbody>();
+        parentTransform = transform.GetComponentInParent<Transform>();
+        originalPos = parentRigBod.transform.position;
         state = 1;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate() {
         cooldown = Math.Clamp(cooldown - Time.deltaTime, 0f, cooldown);
+        if (parentRigBod.transform.position.y < originalPos.y + -20) {
+            parentRigBod.transform.position = originalPos;
+            parentRigBod.velocity = Vector3.zero;
+        } else if (parentRigBod.transform.position.y > originalPos.y + 40) {
+            parentRigBod.AddForce(new Vector3(0, -5, 0));
+        }
 
         // state change when attack cooldown hits 0
         if (cooldown == 0) {
@@ -57,7 +71,7 @@ public class BossAI : MonoBehaviour
             float playerZ = Math.Clamp(transform.InverseTransformPoint(player.transform.position).z, -1, 1);
             // continually rotate towards player
             if (playerZ >= 5 || playerZ <= 5) {
-                transform.GetComponentInParent<Transform>().transform.Rotate(new Vector3(0, -playerZ, 0));
+                parentRigBod.transform.Rotate(new Vector3(0, -playerZ, 0));
             }
         }
 
@@ -78,7 +92,7 @@ public class BossAI : MonoBehaviour
             
             // move forward
             if (cooldown > dashCooldown - 1) {
-                transform.GetComponentInParent<Transform>().position += transform.InverseTransformPoint(dashParticleTransform.position).normalized;
+                parentRigBod.AddRelativeForce(transform.InverseTransformPoint(dashParticleTransform.position).normalized * dashVelocity);
             }
         }
     }
@@ -92,6 +106,8 @@ public class BossAI : MonoBehaviour
         switch (state)
         {
             case 0:
+                parentRigBod.rotation = new Quaternion(0, parentRigBod.rotation.y, 0, parentRigBod.rotation.w).normalized;
+
                 // idle
                 cooldown = idleCooldown;
 
@@ -106,6 +122,8 @@ public class BossAI : MonoBehaviour
                 bossAnimator.SetBool("isDashing", false);
                 break;
             case 1:
+                parentRigBod.rotation = new Quaternion(0, parentRigBod.rotation.y, 0, parentRigBod.rotation.w).normalized;
+
                 // shooting
                 cooldown = shootCooldown;
 
@@ -119,6 +137,8 @@ public class BossAI : MonoBehaviour
                 bossAnimator.SetBool("isDashing", false);
                 break;
             case 2:
+                parentRigBod.rotation = new Quaternion(0, parentRigBod.rotation.y, 0, parentRigBod.rotation.w).normalized;
+
                 // dashing
                 cooldown = dashCooldown;
                 particlesPlayed = false;
@@ -133,6 +153,8 @@ public class BossAI : MonoBehaviour
                 bossAnimator.SetBool("isDashing", true);
                 break;
             default:
+                parentRigBod.rotation = new Quaternion(0, parentRigBod.rotation.y, 0, parentRigBod.rotation.w).normalized;
+            
                 // disable dashing collider
                 dashCollider.gameObject.SetActive(false);
 

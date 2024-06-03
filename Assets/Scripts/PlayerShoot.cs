@@ -11,10 +11,10 @@ public class PlayerShoot : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && gun.isActiveAndEnabled)
             gun.Shoot();
 
-        if (Input.GetKeyDown(reloadKey))
+        if (Input.GetKeyDown(reloadKey) && gun.isActiveAndEnabled)
             gun.StartReload();
     }
 }

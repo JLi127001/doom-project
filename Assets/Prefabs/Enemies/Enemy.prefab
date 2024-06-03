@@ -190,7 +190,7 @@ MonoBehaviour:
   aggroMat: {fileID: 2100000, guid: b31e6ad884fafe14c805f07b5acbcf5e, type: 2}
   isAggro: 0
   playerTransform: {fileID: 0}
-  aggroRange: 5
+  aggroRange: 30
 --- !u!114 &1194097974502869764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   bloodParticles: {fileID: 3766399294070511499, guid: 8f6060aa48d5f90419aa1e405bf6cdef, type: 3}
+  playerTransform: {fileID: 0}

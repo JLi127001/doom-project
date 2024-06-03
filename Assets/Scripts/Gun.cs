@@ -8,11 +8,12 @@ public class Gun : MonoBehaviour {
     [Header("References")]
     [SerializeField] private GunData gunData;
     [SerializeField] private Transform cam;
+    private Animator anim;
     
     float timeSinceLastShot;
 
     private void Start() {
-
+        anim = GetComponentInParent<Animator>();
         gunData.reloading = false;
         gunData.currentAmmo = gunData.magSize;
         CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
@@ -27,12 +28,14 @@ public class Gun : MonoBehaviour {
 
     private IEnumerator Reload() {
         gunData.reloading = true;
+        anim.SetBool("isReloading", true);
         CanvasManager.Instance.updateAmmo("reloading");
 
         yield return new WaitForSeconds(gunData.reloadTime);
 
         gunData.currentAmmo = gunData.magSize;
 
+        anim.SetBool("isReloading", false);
         gunData.reloading = false;
         CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize); // replace magsize with ammo inventory
     }
@@ -46,6 +49,7 @@ public class Gun : MonoBehaviour {
                     IDamageable damageable = hitInfo.transform.GetComponent<IDamageable>();
                     damageable?.TakeDamage(gunData.damage);
                 }
+                anim.Play("GunShoot");
 
                 gunData.currentAmmo--;
                 CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);

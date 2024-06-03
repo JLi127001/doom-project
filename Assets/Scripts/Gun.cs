@@ -43,13 +43,13 @@ public class Gun : MonoBehaviour {
     private void Shoot() {
         if (gunData.currentAmmo > 0) {
             if (CanShoot()) {
-                CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
                 if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, gunData.maxDistance)){
                     IDamageable damageable = hitInfo.transform.GetComponent<IDamageable>();
                     damageable?.TakeDamage(gunData.damage);
                 }
 
                 gunData.currentAmmo--;
+                CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
                 timeSinceLastShot = 0;
                 OnGunShot();
             }

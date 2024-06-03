@@ -25,12 +25,14 @@ public class Gun : MonoBehaviour {
 
     private IEnumerator Reload() {
         gunData.reloading = true;
+        CanvasManager.Instance.updateAmmo("reloading");
 
         yield return new WaitForSeconds(gunData.reloadTime);
 
         gunData.currentAmmo = gunData.magSize;
 
         gunData.reloading = false;
+        CanvasManager.Instance.updateAmmo(gunData.currentAmmo);
     }
 
     private bool CanShoot() => !gunData.reloading && timeSinceLastShot > 1f / (gunData.fireRate / 60f);
@@ -48,6 +50,7 @@ public class Gun : MonoBehaviour {
                 OnGunShot();
             }
         }
+        CanvasManager.Instance.updateAmmo(gunData.currentAmmo);
     }
 
     private void Update() {

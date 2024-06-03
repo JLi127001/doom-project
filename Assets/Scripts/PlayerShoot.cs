@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
 
-    public static Action shootInput;
-    public static Action reloadInput;
+    public Gun gun; 
 
     [SerializeField] private KeyCode reloadKey = KeyCode.R;
 
     private void Update()
     {
         if (Input.GetMouseButton(0))
-            shootInput?.Invoke();
+            gun.Shoot();
 
         if (Input.GetKeyDown(reloadKey))
-            reloadInput?.Invoke();
+            gun.StartReload();
     }
 }

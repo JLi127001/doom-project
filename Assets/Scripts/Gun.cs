@@ -12,8 +12,7 @@ public class Gun : MonoBehaviour {
     float timeSinceLastShot;
 
     private void Start() {
-        PlayerShoot.shootInput += Shoot;
-        PlayerShoot.reloadInput += StartReload;
+
         gunData.reloading = false;
         gunData.currentAmmo = gunData.magSize;
         CanvasManager.Instance.updateAmmo(gunData.currentAmmo, gunData.magSize);
@@ -40,7 +39,7 @@ public class Gun : MonoBehaviour {
 
     private bool CanShoot() => !gunData.reloading && timeSinceLastShot > 1f / (gunData.fireRate / 60f);
 
-    private void Shoot() {
+    public void Shoot() {
         if (gunData.currentAmmo > 0) {
             if (CanShoot()) {
                 if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, gunData.maxDistance)){

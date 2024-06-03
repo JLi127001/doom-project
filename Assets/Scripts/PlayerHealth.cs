@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
         {
             //restart everything
             Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.buildIndex);
+            SceneManager.LoadScene(currentScene.buildIndex, LoadSceneMode.Single);
         }
         CanvasManager.Instance.updateHealth(health);
         CanvasManager.Instance.updateArmor(armor);

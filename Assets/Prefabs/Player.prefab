@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons: []
-  keys: 3100000032000000
+  keys: 310000003200000033000000
   switchTime: 0
   blasts: {fileID: 5114795936572020524}
   weaponHolder: {fileID: 2644231618395959688}

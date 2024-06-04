@@ -16,7 +16,7 @@ public class PlayerShoot : MonoBehaviour {
         selectedWeapon = ws.getSelectedWeapon();
 
         // NOTE: This is somewhat hacky, requires specific orderings in the hierarchy!
-        Gun g = weaponHolder.transform.GetChild(selectedWeapon).GetChild(0).GetComponent<Gun>();
+        Gun g = weaponHolder.transform.GetChild(selectedWeapon).GetComponent<Gun>();
 
         if (Input.GetMouseButton(0) && g.isActiveAndEnabled) {
             g.Shoot();

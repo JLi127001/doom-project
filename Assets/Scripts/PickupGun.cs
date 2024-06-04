@@ -10,7 +10,15 @@ public class PickupGun : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gun.SetActive(true);
+            WeaponSwitching acquire = gun.GetComponentInParent<WeaponSwitching>();
+            if(acquire != null)
+            {
+                acquire.pickedUpWeapon(gun);
+            }
+            else
+            {
+                Debug.Log("uh oh");
+            }
             Destroy(gameObject);
 
         }

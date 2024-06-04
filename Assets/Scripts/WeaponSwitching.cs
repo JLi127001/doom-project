@@ -19,6 +19,7 @@ public class WeaponSwitching : MonoBehaviour {
     private float timeSinceLastSwitch;
     private Animator anim;
 
+    public GameObject blasts;
     public GameObject weaponHolder;
 
     public int getSelectedWeapon() {
@@ -62,7 +63,11 @@ public class WeaponSwitching : MonoBehaviour {
 
     private void Select(int weaponIndex) {
         for (int i = 0; i < weapons.Length; i++)
+        {
             weapons[i].gameObject.SetActive(i == weaponIndex);
+            blasts.transform.GetChild(i).gameObject.SetActive(i == weaponIndex);
+        }
+            
 
         timeSinceLastSwitch = 0f;
 

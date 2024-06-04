@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa892ea31d168a2438444bd86244bc81
+guid: 06d79dd77a6cb5a4488a8500178e1f67
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: print side gun
+      name: duck side
       rect:
         serializedVersion: 2
         x: 0
-        y: 1161
-        width: 1502
-        height: 546
+        y: 1224
+        width: 1130
+        height: 706
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319805adb06d98840ada4b53bd686832
-      internalID: -334547929
+      spriteID: 7e9bf84f0fbb12b4aaa781916096ad8b
+      internalID: -1042414169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: print back gun
+      name: duck bubbles
       rect:
         serializedVersion: 2
-        x: 197
-        y: 341
-        width: 349
-        height: 562
+        x: 942
+        y: 280
+        width: 1106
+        height: 971
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c564ca487949d47be3c3573c529b9e
-      internalID: -1790873407
+      spriteID: 69f1df6fc5de69542b881cfee59c0139
+      internalID: -1960267242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blast
+      name: duck back
       rect:
         serializedVersion: 2
-        x: 641
-        y: 159
-        width: 1389
-        height: 913
+        x: 306
+        y: 118
+        width: 400
+        height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d65a003df57281447bf2294c6d806bda
-      internalID: 646602371
+      spriteID: 9866c08485818234180dcc7c4145c2da
+      internalID: -435560772
       vertices: []
       indices: 
       edges: []
@@ -175,7 +175,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4a499f512595fea4eb1ab4ea7fcea975
+    spriteID: 2ef923f3e62f86a4e95bbfbadd387dee
     internalID: 0
     vertices: []
     indices: 
@@ -183,50 +183,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Print(1)_1: -2071953810
-      Print(1)_10: -2108536093
-      Print(1)_11: -1419224902
-      Print(1)_12: -142697592
-      Print(1)_13: 109242707
-      Print(1)_14: -177359448
-      Print(1)_15: 559975687
-      Print(1)_16: 306292807
-      Print(1)_17: -2085402006
-      Print(1)_18: -2077810222
-      Print(1)_19: 1647742979
-      Print(1)_2: 1192140359
-      Print(1)_20: 2092404211
-      Print(1)_21: 147183782
-      Print(1)_22: -613261607
-      Print(1)_23: 1920738154
-      Print(1)_24: 1464712393
-      Print(1)_25: -1020152167
-      Print(1)_26: 985747876
-      Print(1)_27: -751394942
-      Print(1)_28: -1393574011
-      Print(1)_29: 1497735740
-      Print(1)_3: -1778924186
-      Print(1)_30: 946376233
-      Print(1)_31: 784287514
-      Print(1)_32: 118776892
-      Print(1)_33: 1820175624
-      Print(1)_34: 764526405
-      Print(1)_35: 80066819
-      Print(1)_36: -592806249
-      Print(1)_37: -2098037313
-      Print(1)_38: -696861791
-      Print(1)_39: 488546653
-      Print(1)_4: -248667960
-      Print(1)_40: -239898639
-      Print(1)_42: 2131325090
-      Print(1)_43: 1217832652
-      Print(1)_5: 125559184
-      Print(1)_6: 329256975
-      Print(1)_7: -539018254
-      Print(1)_9: -1454254915
-      blast: 646602371
-      print back gun: -1790873407
-      print side gun: -334547929
+      Duck_1: -913224566
+      Duck_10: 474830418
+      Duck_3: -1405494842
+      Duck_5: -1550695234
+      Duck_6: 1033342729
+      Duck_7: -1889325720
+      Duck_8: 1680909130
+      Duck_9: 2094236579
+      duck back: -435560772
+      duck bubbles: -1960267242
+      duck side: -1042414169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

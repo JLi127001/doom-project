@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1194097974502869764, guid: 8034b1884fc850e4e962475998364c87, type: 3}
+      propertyPath: enemyAwareness
+      value: 
+      objectReference: {fileID: 6285592628972364370}
     - target: {fileID: 2390103653165704197, guid: 8034b1884fc850e4e962475998364c87, type: 3}
       propertyPath: m_Drag
       value: 2
@@ -93,15 +97,18 @@ PrefabInstance:
       addedObject: {fileID: 7459843855218285544}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4246549913397559875, guid: 8034b1884fc850e4e962475998364c87, type: 3}
-      insertIndex: 7
-      addedObject: {fileID: 6078598383786803869}
+      insertIndex: -1
+      addedObject: {fileID: 6285592628972364370}
+    - targetCorrespondingSourceObject: {fileID: 4246549913397559875, guid: 8034b1884fc850e4e962475998364c87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1514392154708857027}
   m_SourcePrefab: {fileID: 100100000, guid: 8034b1884fc850e4e962475998364c87, type: 3}
 --- !u!1 &1278020032691818772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4246549913397559875, guid: 8034b1884fc850e4e962475998364c87, type: 3}
   m_PrefabInstance: {fileID: 3121758528225334103}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6078598383786803869
+--- !u!114 &6285592628972364370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,14 +117,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278020032691818772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff8d2ecc638a0942b941cedc967f3c2, type: 3}
+  m_Script: {fileID: 11500000, guid: cef4814b2c2f0444f83e01edc93e679f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroMat: {fileID: 2100000, guid: b31e6ad884fafe14c805f07b5acbcf5e, type: 2}
-  antAnim: {fileID: 3954335798035525968}
+  AnimatorString: AntAggravated
+  anim: {fileID: 3954335798035525968}
   isAggro: 0
   playerTransform: {fileID: 0}
-  aggroRange: 30
+  aggroRange: 50
+--- !u!114 &1514392154708857027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278020032691818772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83eca0cfb4cc0ea43a17e3f20a4db98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6646885946785813733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8605478775466919858, guid: 8034b1884fc850e4e962475998364c87, type: 3}

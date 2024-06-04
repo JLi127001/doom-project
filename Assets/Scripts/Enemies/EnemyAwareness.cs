@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyAwareness : MonoBehaviour
 {
-    public Material aggroMat;
+    public string AnimatorString;
+    public Animator anim;
     public bool isAggro;
     public Transform playerTransform;
     [SerializeField] private float aggroRange;
@@ -17,7 +18,7 @@ public class EnemyAwareness : MonoBehaviour
         }
 
         if (isAggro) {
-            GetComponent<MeshRenderer>().material = aggroMat;
+            anim.SetBool(AnimatorString, true);
         }
     }
 }

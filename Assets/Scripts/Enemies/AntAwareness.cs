@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AntAwareness : MonoBehaviour
+public class AntAwareness : EnemyAwareness
 {
     public Material aggroMat;
     public Animator antAnim;

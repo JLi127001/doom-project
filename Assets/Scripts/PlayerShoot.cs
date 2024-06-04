@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
 
-    public Gun gun; 
+    public GameObject weaponHolder;
+    private int selectedWeapon;
 
     [SerializeField] private KeyCode reloadKey = KeyCode.R;
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && gun.isActiveAndEnabled)
-            gun.Shoot();
+        WeaponSwitching ws = weaponHolder.GetComponent<WeaponSwitching>();
+        selectedWeapon = ws.getSelectedWeapon();
 
-        if (Input.GetKeyDown(reloadKey) && gun.isActiveAndEnabled)
-            gun.StartReload();
+        // NOTE: This is somewhat hacky, requires specific orderings in the hierarchy!
+        Gun g = weaponHolder.transform.GetChild(selectedWeapon).GetComponent<Gun>();
+
+        if (Input.GetMouseButton(0) && g.isActiveAndEnabled) {
+            g.Shoot();
+        }
+
+        if (Input.GetKeyDown(reloadKey) && g.isActiveAndEnabled) {
+            g.StartReload();
+        }
     }
 }

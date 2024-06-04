@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
 
-    public Gun gun;
     public GameObject weaponHolder;
-
     private int selectedWeapon;
 
     [SerializeField] private KeyCode reloadKey = KeyCode.R;
@@ -16,14 +14,16 @@ public class PlayerShoot : MonoBehaviour {
     {
         WeaponSwitching ws = weaponHolder.GetComponent<WeaponSwitching>();
         selectedWeapon = ws.getSelectedWeapon();
-        Debug.Log(selectedWeapon);
 
-        if (Input.GetMouseButton(0) && gun.isActiveAndEnabled) {
-            gun.Shoot();
+        // NOTE: This is somewhat hacky, requires specific orderings in the hierarchy!
+        Gun g = weaponHolder.transform.GetChild(selectedWeapon).GetChild(0).GetComponent<Gun>();
+
+        if (Input.GetMouseButton(0) && g.isActiveAndEnabled) {
+            g.Shoot();
         }
 
-        if (Input.GetKeyDown(reloadKey) && gun.isActiveAndEnabled) {
-            gun.StartReload();
+        if (Input.GetKeyDown(reloadKey) && g.isActiveAndEnabled) {
+            g.StartReload();
         }
     }
 }

@@ -139,8 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422123fee89e3634ebfe704e07dc2488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 304203005064940044}
-  selectedWeapon: 0
   weaponHolder: {fileID: 4416576749527154975}
   reloadKey: 114
 --- !u!114 &5468943256603957796
@@ -589,6 +587,7 @@ MonoBehaviour:
   weapons: []
   keys: 3100000032000000
   switchTime: 0
+  weaponHolder: {fileID: 4416576749527154975}
 --- !u!1 &5114795936572020524
 GameObject:
   m_ObjectHideFlags: 0

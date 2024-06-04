@@ -17,6 +17,8 @@ public class WeaponSwitching : MonoBehaviour {
     private int selectedWeapon;
     private float timeSinceLastSwitch;
 
+    public GameObject weaponHolder;
+
     public int getSelectedWeapon() {
         return this.selectedWeapon;
     }
@@ -58,5 +60,8 @@ public class WeaponSwitching : MonoBehaviour {
         OnWeaponSelected();
     }
 
-    private void OnWeaponSelected() {  }
+    private void OnWeaponSelected() {
+        Gun g = weaponHolder.transform.GetChild(selectedWeapon).GetChild(0).GetComponent<Gun>();
+        CanvasManager.Instance.updateAmmo(g.getGunData().currentAmmo, g.getGunData().magSize);
+    }
 }

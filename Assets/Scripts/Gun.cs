@@ -9,8 +9,12 @@ public class Gun : MonoBehaviour {
     [SerializeField] private GunData gunData;
     [SerializeField] private Transform cam;
     private Animator anim;
-    
+
     float timeSinceLastShot;
+
+    public GunData getGunData() {
+        return this.gunData;
+    }
 
     private void Start() {
         anim = GetComponentInParent<Animator>();

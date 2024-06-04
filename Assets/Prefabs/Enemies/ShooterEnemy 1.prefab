@@ -258,7 +258,7 @@ MonoBehaviour:
   anim: {fileID: 3759456751620466211}
   isAggro: 0
   playerTransform: {fileID: 0}
-  aggroRange: 40
+  aggroRange: 20
 --- !u!1 &4943589142649275987
 GameObject:
   m_ObjectHideFlags: 0

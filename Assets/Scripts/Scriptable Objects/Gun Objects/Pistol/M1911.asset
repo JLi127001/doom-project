@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: M1911
   m_EditorClassIdentifier: 
   name: M1911
-  damage: 16
+  damage: 40
   maxDistance: 100
   currentAmmo: 18
   magSize: 18

@@ -107,7 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5639484171504011911}
   - component: {fileID: 6464962805322035124}
-  - component: {fileID: 8936301469381150882}
   - component: {fileID: 1776752175322558110}
   m_Layer: 0
   m_Name: Keycard
@@ -153,22 +152,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8936301469381150882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5643620880448372968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a40bfb9b6f796174d8a141ad81032386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHealth: 1
-  isArmor: 0
-  isAmmo: 0
-  amount: 20
 --- !u!114 &1776752175322558110
 MonoBehaviour:
   m_ObjectHideFlags: 0

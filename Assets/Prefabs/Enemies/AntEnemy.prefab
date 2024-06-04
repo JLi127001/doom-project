@@ -124,7 +124,7 @@ MonoBehaviour:
   anim: {fileID: 3954335798035525968}
   isAggro: 0
   playerTransform: {fileID: 0}
-  aggroRange: 50
+  aggroRange: 30
 --- !u!114 &1514392154708857027
 MonoBehaviour:
   m_ObjectHideFlags: 0

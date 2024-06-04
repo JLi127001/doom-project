@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 6415045051653026140}
   - component: {fileID: 1874319714664786301}
   - component: {fileID: 8933320541786006657}
+  - component: {fileID: 7932823397716114831}
   m_Layer: 0
   m_Name: BigBugTransform
   m_TagString: Untagged
@@ -266,6 +267,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 35
   hitRate: 3
+--- !u!114 &7932823397716114831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940576723217347298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0011dea10929cd44a9cd419f70f1fb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  bloodParticles: {fileID: 3766399294070511499, guid: 8f6060aa48d5f90419aa1e405bf6cdef, type: 3}
+  deathParticles: {fileID: 3766399294070511499, guid: b71861808ab05ef4abd97495b6de3767, type: 3}
+  deathParticles2: {fileID: 3766399294070511499, guid: 42b55a88f5e85f245a62b65ecda718ad, type: 3}
+  playerTransform: {fileID: 0}
 --- !u!1 &1641953738383648707
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class BossAI : MonoBehaviour
     [SerializeField] private float shootCooldown;
     [SerializeField] private float idleCooldown;
     public int state; // 0 = idle, 1 = shooting, 2 = dashing
+    public bool midPhase;
 
     // animator
     public Animator bossAnimator;
@@ -32,6 +33,11 @@ public class BossAI : MonoBehaviour
     private Vector3 originalPos;
     private Rigidbody parentRigBod;
     private Transform parentTransform;
+    [SerializeField] private BossTarget bossTarget;
+
+    // mid phase
+    [SerializeField] GameObject midPhaseEnemyHolder;
+    private GameObject[] bossEnemies;
 
     void Start()
     {
@@ -40,6 +46,8 @@ public class BossAI : MonoBehaviour
         originalPos = parentRigBod.transform.position;
         state = 1;
         player = GameObject.FindGameObjectWithTag("Player");
+        midPhase = false;
+        bossEnemies = GameObject.FindGameObjectsWithTag("BossMinion");
     }
 
     private void FixedUpdate() {
@@ -52,7 +60,7 @@ public class BossAI : MonoBehaviour
         }
 
         // state change when attack cooldown hits 0
-        if (cooldown == 0) {
+        if (cooldown == 0 && !midPhase) {
             // if state is already idle, change it to a random state between 1-2
             // else, change to idle
             if (state == 0) {
@@ -62,10 +70,14 @@ public class BossAI : MonoBehaviour
                 state = 0;
                 ChangeState();
             }
+        } else if (cooldown == 0 && midPhase) {
+            // if the boss is in it's mid phase, keep it in idle
+            state = 0;
+            ChangeState();
         }
 
         // idle state, boss should rotate towards player
-        if (state == 0) {
+        if (state == 0 && !midPhase) {
             // GetComponentInParent<Rigidbody>() = Quaternion.Euler(0, GetComponentInParent<Rigidbody>().rotation.y, 0);
             // get player position
             float playerZ = Math.Clamp(transform.InverseTransformPoint(player.transform.position).z, -1, 1);
@@ -95,10 +107,23 @@ public class BossAI : MonoBehaviour
                 parentRigBod.AddRelativeForce(transform.InverseTransformPoint(dashParticleTransform.position).normalized * dashVelocity);
             }
         }
+
+        if (midPhase) {
+            bossEnemies = GameObject.FindGameObjectsWithTag("BossMinion");
+            if (bossEnemies.Length == 0) {
+                midPhase = false;
+                bossTarget.invulnerable = false;
+            }
+        }
     }
 
     private void shoot() {
         Instantiate(bossProjectile, projectileSpawnTransform.position, projectileSpawnTransform.rotation);
+    }
+
+    public void startMidPhase() {
+        midPhaseEnemyHolder.SetActive(true);
+        midPhase = true;
     }
 
     void ChangeState()
@@ -165,6 +190,5 @@ public class BossAI : MonoBehaviour
                 bossAnimator.SetBool("isDashing", false);
                 break;
         }
-        
     }
 }

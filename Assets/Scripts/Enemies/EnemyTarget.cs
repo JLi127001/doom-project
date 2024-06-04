@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyTarget : Target
 {
     public ParticleSystem bloodParticles;
+    public ParticleSystem DeathParticles;
+    public ParticleSystem DeathParticles2;
     public Transform playerTransform;
     protected virtual void Start() {
         playerTransform = GameObject.FindGameObjectWithTag("PlayerModel").transform;

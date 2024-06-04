@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -627,6 +627,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7893365431514160189, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
+      propertyPath: bossTarget
+      value: 
+      objectReference: {fileID: 556279522}
+    - target: {fileID: 7893365431514160189, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
+      propertyPath: midPhaseEnemyHolder
+      value: 
+      objectReference: {fileID: 1550942491}
+    - target: {fileID: 7932823397716114831, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
+      propertyPath: bossAI
+      value: 
+      objectReference: {fileID: 1696330338}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1055,6 +1067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AntEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1278020032691818772, guid: 889377792496ab548a49180b10de0836, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
+      objectReference: {fileID: 0}
     - target: {fileID: 6646885946785813733, guid: 889377792496ab548a49180b10de0836, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.4281225
@@ -1334,6 +1350,10 @@ PrefabInstance:
     - target: {fileID: 1278020032691818772, guid: 889377792496ab548a49180b10de0836, type: 3}
       propertyPath: m_Name
       value: AntEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278020032691818772, guid: 889377792496ab548a49180b10de0836, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
       objectReference: {fileID: 0}
     - target: {fileID: 6646885946785813733, guid: 889377792496ab548a49180b10de0836, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2175,6 +2195,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 914446982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &556279522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7932823397716114831, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
+  m_PrefabInstance: {fileID: 135583783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0011dea10929cd44a9cd419f70f1fb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &600199685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4547,6 +4578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AntEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1278020032691818772, guid: 889377792496ab548a49180b10de0836, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
+      objectReference: {fileID: 0}
     - target: {fileID: 6646885946785813733, guid: 889377792496ab548a49180b10de0836, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.248533
@@ -5251,6 +5286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShooterEnemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4451899366396281956, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
+      objectReference: {fileID: 0}
     - target: {fileID: 6092589553631956221, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.8691163
@@ -5378,7 +5417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1550942492
 Transform:
   m_ObjectHideFlags: 0
@@ -5413,6 +5452,10 @@ PrefabInstance:
     - target: {fileID: 1278020032691818772, guid: 889377792496ab548a49180b10de0836, type: 3}
       propertyPath: m_Name
       value: AntEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278020032691818772, guid: 889377792496ab548a49180b10de0836, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
       objectReference: {fileID: 0}
     - target: {fileID: 6646885946785813733, guid: 889377792496ab548a49180b10de0836, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5758,6 +5801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShooterEnemy 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4451899366396281956, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
+      objectReference: {fileID: 0}
     - target: {fileID: 6092589553631956221, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.1956835
@@ -5807,11 +5854,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6092589553631956221, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
   m_PrefabInstance: {fileID: 1640866577}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1643726279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2644231618395959688, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
-  m_PrefabInstance: {fileID: 2117221165}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1649926467 stripped
 Transform:
@@ -5959,6 +6001,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1867686715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1696330338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7893365431514160189, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
+  m_PrefabInstance: {fileID: 135583783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3ccc9540b5bb749a40daa3b1ec1b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1710958609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6200,7 +6253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1157c4220d0573247a8a9e460892640b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons: {fileID: 1643726279}
 --- !u!1001 &1856111377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6887,6 +6939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShooterEnemy 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4451899366396281956, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
+      objectReference: {fileID: 0}
     - target: {fileID: 6092589553631956221, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.517974
@@ -6948,6 +7004,10 @@ PrefabInstance:
     - target: {fileID: 4451899366396281956, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
       propertyPath: m_Name
       value: ShooterEnemy 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451899366396281956, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
+      propertyPath: m_TagString
+      value: BossMinion
       objectReference: {fileID: 0}
     - target: {fileID: 6092589553631956221, guid: 98feea448bdc11a44b1b57000bccc433, type: 3}
       propertyPath: m_LocalPosition.x

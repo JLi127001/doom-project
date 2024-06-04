@@ -70,14 +70,14 @@ public class BossAI : MonoBehaviour
                 state = 0;
                 ChangeState();
             }
-        } else if (cooldown == 0 && midPhase) {
+        } else if (midPhase) {
             // if the boss is in it's mid phase, keep it in idle
             state = 0;
             ChangeState();
         }
 
         // idle state, boss should rotate towards player
-        if (state == 0 && !midPhase) {
+        if (state == 0) {
             // GetComponentInParent<Rigidbody>() = Quaternion.Euler(0, GetComponentInParent<Rigidbody>().rotation.y, 0);
             // get player position
             float playerZ = Math.Clamp(transform.InverseTransformPoint(player.transform.position).z, -1, 1);

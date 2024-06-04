@@ -12,8 +12,8 @@ public class EnemyContactDamage : MonoBehaviour
         cooldown = Math.Clamp(cooldown - Time.deltaTime, 0f, cooldown);
     }
     private void OnCollisionEnter(Collision other) {
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "PlayerModel" && cooldown == 0f) {
-            Debug.Log("E");
             cooldown = hitRate;
             other.gameObject.GetComponentInParent<PlayerHealth>().damagePlayer((int) damage);
         }

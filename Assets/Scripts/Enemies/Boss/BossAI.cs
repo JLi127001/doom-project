@@ -21,7 +21,7 @@ public class BossAI : MonoBehaviour
     [SerializeField] private Transform dashParticleTransform;
     [SerializeField] private ParticleSystem dashParticles;
     private bool particlesPlayed;
-    [SerializeField] private Collider dashCollider;
+    // [SerializeField] private Collider dashCollider;
     [SerializeField] private float dashVelocity;
 
         // shooting
@@ -83,7 +83,7 @@ public class BossAI : MonoBehaviour
         // dash attack state, boss should be moving forward after a slight delay
         if (state == 2) {
             // emit particles
-            if (cooldown <= dashCooldown - 1 && !particlesPlayed) {
+            if (cooldown <= dashCooldown - .5 && !particlesPlayed) {
                 particlesPlayed = true;
                 ParticleSystem dashP = Instantiate(dashParticles, dashParticleTransform);
                 dashP.transform.position = dashParticleTransform.position;
@@ -113,7 +113,7 @@ public class BossAI : MonoBehaviour
 
                 // disable dashing collider
                 // (collider has script to damage on interval on player contact)
-                dashCollider.gameObject.SetActive(false);
+                // dashCollider.gameObject.SetActive(false);
 
                 // disable shooting
                 CancelInvoke();
@@ -131,7 +131,7 @@ public class BossAI : MonoBehaviour
                 InvokeRepeating("shoot", .5f, 1f);
 
                 // disable dashing collider
-                dashCollider.gameObject.SetActive(false);
+                // dashCollider.gameObject.SetActive(false);
 
                 bossAnimator.SetBool("isShooting", true);
                 bossAnimator.SetBool("isDashing", false);
@@ -147,7 +147,7 @@ public class BossAI : MonoBehaviour
                 CancelInvoke();
 
                 // enable dashing collider
-                dashCollider.gameObject.SetActive(true);
+                // dashCollider.gameObject.SetActive(true);
 
                 bossAnimator.SetBool("isShooting", false);
                 bossAnimator.SetBool("isDashing", true);
@@ -156,7 +156,7 @@ public class BossAI : MonoBehaviour
                 parentRigBod.rotation = new Quaternion(0, parentRigBod.rotation.y, 0, parentRigBod.rotation.w).normalized;
             
                 // disable dashing collider
-                dashCollider.gameObject.SetActive(false);
+                // dashCollider.gameObject.SetActive(false);
 
                 // disable shooting
                 CancelInvoke();

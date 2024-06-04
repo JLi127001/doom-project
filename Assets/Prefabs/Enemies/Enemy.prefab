@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 378747913688135771}
   - component: {fileID: 1194097974502869764}
   - component: {fileID: 6616085570022441063}
+  - component: {fileID: 200032095915261407}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -190,7 +191,7 @@ MonoBehaviour:
   aggroMat: {fileID: 2100000, guid: b31e6ad884fafe14c805f07b5acbcf5e, type: 2}
   isAggro: 0
   playerTransform: {fileID: 0}
-  aggroRange: 5
+  aggroRange: 30
 --- !u!114 &1194097974502869764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +221,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   bloodParticles: {fileID: 3766399294070511499, guid: 8f6060aa48d5f90419aa1e405bf6cdef, type: 3}
+  playerTransform: {fileID: 0}
+--- !u!114 &200032095915261407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246549913397559875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f93934f554145c4586532b841bc8321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  hitRate: 2

@@ -13,7 +13,6 @@ public class EnemyContactDamage : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag == "PlayerModel" && cooldown == 0f) {
-            Debug.Log("E");
             cooldown = hitRate;
             other.gameObject.GetComponentInParent<PlayerHealth>().damagePlayer((int) damage);
         }

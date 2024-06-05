@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CSE2Building.unity
+    guid: ecb010cfc9b118942825dcb7f90435ae
+  - enabled: 1
     path: Assets/Scenes/FinalBoss.unity
     guid: 6938747b6f9a77e4cba82b01874b49c2
-  - enabled: 1
-    path: Assets/Scenes/win.unity
-    guid: 87ca3958ea7c05640b9b1af3711e614f
-  - enabled: 1
-    path: Assets/Scenes/CSE2Building.unity
-    guid: b9c67b16115d1c1459e3b00bee0e3018
   m_configObjects: {}

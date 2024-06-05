@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b61d530b6678f409b7af3fbcfc1b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 1.5
-  smoothing: 10
+  sensitivity: 1
+  smoothing: 1
   Camera: {fileID: 4321379047864714096}
 --- !u!114 &5111286861235172795
 MonoBehaviour:
@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe63f5f0e9d5dbf4fb7fb45ee119269a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  sensitivityMultiplier: 4
+  speed: 2
+  sensitivityMultiplier: 2
 --- !u!114 &5860589451371567955
 MonoBehaviour:
   m_ObjectHideFlags: 0

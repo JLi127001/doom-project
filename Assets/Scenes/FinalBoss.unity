@@ -641,7 +641,11 @@ PrefabInstance:
       objectReference: {fileID: 1696330338}
     - target: {fileID: 7932823397716114831, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
       propertyPath: health
-      value: 1
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932823397716114831, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
+      propertyPath: maxHealth
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 7932823397716114831, guid: e9a108d79f5ef5a47807aaab5a37dd3f, type: 3}
       propertyPath: winScreen

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ScuffedShotgun
   m_EditorClassIdentifier: 
   name: Shotgun
-  damage: 200
-  maxDistance: 20
-  currentAmmo: 1
-  magSize: 1
-  fireRate: 20
-  reloadTime: 3
+  damage: 400
+  maxDistance: 15
+  currentAmmo: 2
+  magSize: 2
+  fireRate: 120
+  reloadTime: 5
   reloading: 0

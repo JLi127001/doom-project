@@ -21354,13 +21354,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 831795803784103336, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831795803784103336, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
+      propertyPath: sensitivityMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1720217874717390331, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4416576749527154975, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5027934016963211535, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21402,9 +21406,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5111286861235172795, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
-      propertyPath: gun
-      value: 
+    - target: {fileID: 5222418697420813366, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
+      propertyPath: smoothing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222418697420813366, guid: 07d60d0d0fabccb4eb1a87d5db87dcc1, type: 3}
+      propertyPath: sensitivity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

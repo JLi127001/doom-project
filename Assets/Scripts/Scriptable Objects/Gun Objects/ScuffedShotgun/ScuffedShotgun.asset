@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Shotgun
   damage: 400
   maxDistance: 15
-  currentAmmo: 2
+  currentAmmo: 1
   magSize: 2
   fireRate: 120
-  reloadTime: 5
+  reloadTime: 2.5
   reloading: 0

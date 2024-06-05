@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class BossTarget : Target
 {
@@ -28,7 +29,6 @@ public class BossTarget : Target
             base.TakeDamage(damage);
 
             bossAI.startMidPhase();
-
             hitHalf = true;
             invulnerable = true;
         }

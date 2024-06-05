@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3329c4b0d85c66468bc20470b14c10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunData: {fileID: 11400000, guid: dd4f2a1ba1b706a45aeaf7cfb5f678b1, type: 2}
+  gunData: {fileID: 11400000, guid: f487c3e90755f054e8c9948f45aa6903, type: 2}
   cam: {fileID: 5260013762411074852}
 --- !u!1 &7901731358014480797
 GameObject:
